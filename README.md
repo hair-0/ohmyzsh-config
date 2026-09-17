@@ -1,4 +1,4 @@
-# dotfiles
+# ohmyzsh-config
 
 用 [chezmoi](https://www.chezmoi.io) 管理的 zsh / powerlevel10k 配置（私有仓库）。
 
@@ -19,12 +19,12 @@
 一条命令：
 
 ```sh
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply hair-0/dotfiles
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply hair-0/ohmyzsh-config
 ```
 
 `chezmoi apply` 会：写入 `.zshrc`、`.p10k.zsh`，并运行 `scripts/run_once_install-oh-my-zsh.sh`（仅首次：安装 oh-my-zsh、克隆三个插件和 powerlevel10k 主题）。
 
-> 若 `get.chezmoi.io` 网络不通：从 [chezmoi Releases](https://github.com/twpayne/chezmoi/releases/latest) 下载 `linux_amd64` 包解压到 `~/.local/bin`，再执行 `chezmoi init --apply hair-0/dotfiles`。
+> 若 `get.chezmoi.io` 网络不通：从 [chezmoi Releases](https://github.com/twpayne/chezmoi/releases/latest) 下载 `linux_amd64` 包解压到 `~/.local/bin`，再执行 `chezmoi init --apply hair-0/ohmyzsh-config`。
 
 ## 装完后
 
