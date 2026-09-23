@@ -2,6 +2,23 @@
 
 用 [chezmoi](https://www.chezmoi.io) 管理的 zsh / powerlevel10k 配置（公开仓库）。
 
+> **适用范围**：本仓库保留给 **Ubuntu 22.04 / WSL2** 场景（miniconda3、ROS 2 Humble、
+> WSL 互操作别名）。如果你在 **Ubuntu 24.04 及以上**、或需要完整桌面调教
+> （KDE 外观、Konsole、fcitx5、GTK/字体渲染、软件清单与系统微调），
+> 请改用新仓库 **https://github.com/hair-0/tuned-ubuntu**。
+
+## 与其他仓库的关系
+
+| 仓库 | 适用系统 | zsh/p10k 差异要点 |
+|---|---|---|
+| 本仓库 `ohmyzsh-config` | Ubuntu 22.04 / WSL2 | miniconda3、ROS 2 Humble、WSL 别名（`explorer.exe`）、WSL PATH 说明 |
+| [`tuned-ubuntu`](https://github.com/hair-0/tuned-ubuntu) | Ubuntu 24.04+ 桌面 | miniforge3、ROS 2 Jazzy、nvm（默认关闭）、tk25 workspace + 完整桌面配置 |
+
+两个仓库的 `.zshrc` 模板**主要分歧**就在 conda 路径、ROS 发行版和 WSL 专属行；
+其余部分（omz 插件、历史/补全设置、别名、p10k）基本一致。
+
+> ⚠️ 请勿把 24.04 版配置应用到 22.04/WSL 机器，反之亦然——conda 路径和 ROS 发行版会不匹配。
+
 ## 内容
 
 - `.zshrc` — 模板（`dot_zshrc.tmpl`）：conda 路径按机器渲染；主题 powerlevel10k、插件、别名、历史/补全设置、fzf、kimi-code PATH
