@@ -40,8 +40,8 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply hair-0/ohmyzsh-config
 ```
 
 `chezmoi apply` 会：写入 `.zshrc`、`.p10k.zsh`，并运行安装脚本（均仅首次执行、幂等）：
-- `scripts/run_once_install-oh-my-zsh.sh` — 安装 oh-my-zsh，克隆三个插件和 powerlevel10k 主题
-- `scripts/run_once_install-nerd-font.sh` — 下载安装 MesloLGS NF 字体到 `~/.local/share/fonts`
+- `.chezmoiscripts/run_once_install-oh-my-zsh.sh` — 安装 oh-my-zsh，克隆三个插件和 powerlevel10k 主题
+- `.chezmoiscripts/run_once_install-nerd-font.sh` — 下载安装 MesloLGS NF 字体到 `~/.local/share/fonts`
 
 > 若 `get.chezmoi.io` 网络不通：从 [chezmoi Releases](https://github.com/twpayne/chezmoi/releases/latest) 下载 `linux_amd64` 包解压到 `~/.local/bin`，再执行 `chezmoi init --apply hair-0/ohmyzsh-config`。
 
